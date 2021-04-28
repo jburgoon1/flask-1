@@ -1,8 +1,8 @@
 {%block title%}Currency Exchange{%endblock%}
 {%block content%}
-{%for message in get_flashed_messages()%}
-<h1>{{message}}</h1>
-{%endfor%}
+
+<h1>{{error}}</h1>
+
 <h1>Currency Exchange</h1>
     <form action="/convert" method="POST">
         <label for="in">Current Currency:
@@ -16,6 +16,5 @@
         </label>
         <button>Convert</button>
     </form>
-    <h1>Your Amount is:</h1>
-    <h1>{{symbol}}{{converted}}</h1>
+    
 {%endblock%}
